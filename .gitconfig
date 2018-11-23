@@ -1,0 +1,76 @@
+[core]
+	user = Jan Václavík
+	email = jvaclavik@gmail.com
+	autocrlf = input
+	safecrlf = false
+	excludesfile = /Users/janvaclavik/.gitignore_global
+[push]
+	default = current
+[difftool]
+	prompt = false
+[mergetool]
+	prompt = false
+[color]
+	ui = auto
+	interactive = auto
+[color "branch"]
+	current = yellow reverse
+	local = yellow
+	remote = green
+[color "diff"]
+	meta = yellow
+	frag = magenta
+	old = red
+	new = green
+[color "status"]
+	added = green
+	changed = yellow
+	untracked = cyan
+[alias]	
+	fetch = fetch -p
+	f = fetch -p
+	m = merge
+	mom = merge origin/master
+	p = push
+	pf = push --force
+	s = status
+	st = status -s
+	sts = status
+	c = checkout
+	cma = commit --amend
+	unstage = reset HEAD
+	br = branch
+	co = checkout
+	rh = reset --hard
+	stash = stash --keep-index
+	su = submodule update --recursive
+	df = diff
+	dfc = diff --cached
+	l = log --graph --all --decorate --pretty=oneline --abbrev-commit
+	ll = log --graph --decorate --pretty=oneline --abbrev-commit --all
+	ld = log -p
+	ls = log --stat
+	test = push -f origin HEAD:test
+	selenium = push -f origin HEAD:selenium
+	stats = shortlog -n -s --no-merges
+	rmb = !sh -c 'git push origin :$1' -
+	rb = rebase
+	rbi = rebase -i
+        ri = rebase -i HEAD~10
+	rbc = rebase --continue
+	rba = rebase --abort
+	rbom = rebase origin/master
+	rbiom = rebase -i origin/master
+	cp = cherry-pick
+	optimize = !git prune && git gc --aggressive && git repack -a && git prune-packed
+	all = add --all
+	cm = commit -m
+        cma = commit --amend --no-edit
+	b = branch
+	cb = checkout -b
+	a = add --all
+[merge]
+	conflictstyle = diff3
+[user]
+	name = Jan Václavík
+	email = jvaclavik@gmail.com
